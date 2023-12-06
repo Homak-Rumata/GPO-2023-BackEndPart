@@ -7,6 +7,8 @@ let PersonInf;
 let LeaderInf;
 let FactoryInf;
 
+
+//Файл отпраки данных актуальных заявлений
 let Date = [
     {
         id: 0,
@@ -118,6 +120,8 @@ app.get ('/FactoryInfoForm', (req, res) => {
     .send(FactoryInfInf);
 })
 
+
+//Получение информации о актуальных запросах
 app.post ('/getstatmens', (req, res) => {
     res
     .status(200)
@@ -125,6 +129,7 @@ app.post ('/getstatmens', (req, res) => {
     .end;
 })
 
+//Ответ на запрос данных о заполненной форме
 app.post ('/getformDate', (req, res) => {
     console.log(JSON.stringify(req.body))
     res
@@ -134,7 +139,7 @@ app.post ('/getformDate', (req, res) => {
     
 })
 
-//Легаси, действие кнопки
+//Легаси(в коментариях), действие кнопки/ открытие стартовой страницы
 app.post ('/block', (req, res) => {
     //console.log(req.body);
     //res.send(req.body);
