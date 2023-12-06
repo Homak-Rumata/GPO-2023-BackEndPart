@@ -1,7 +1,13 @@
+//Открытие рабочих вкладок
+
+
+//Кнопки
 let Steps = document.getElementsByClassName("StepControlBotton");
 //const Panels = document.getElementsByClassName("WorkDateBlocks");
+//Рабочие поля
 let Panels = [document.getElementById("WorkPannel"), undefined, 
   document.getElementById("factory"), document.getElementById("leader"), undefined];
+//Покраска кнопок  
 let Fields = document.getElementsByClassName("StepControlField"); 
 
 Fields[0].classList.add ('active');

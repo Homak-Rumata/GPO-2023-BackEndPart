@@ -25,7 +25,7 @@ function a () {
                     })
                     .then (response => response.json())
                     .then (information => {
-                        FactoryNameTextField.value = information.FactoryNameTextField;
+                        /*FactoryNameTextField.value = information.FactoryNameTextField;
                         RegionNameTextField.value = information.RegionNameTextField;
                         DistrictNameTextField.value = information.DistrictNameTextField;
                         LocalityNameTextField.value = information.LocalityNameTextField;
@@ -44,7 +44,19 @@ function a () {
                         WorkLeaderTreeNameTextField.value = information.WorkLeaderTreeNameTextField;
                         CafedralLeaderFirstNameTextField.value = information.CafedralLeaderFirstNameTextField;
                         CafedralLeaderSecondNameTextField.value = information.CafedralLeaderSecondNameTextField;
-                        CafedralLeaderTreeNameTextField.value = information.CafedralLeaderTreeNameTextField});
+                        CafedralLeaderTreeNameTextField.value = information.CafedralLeaderTreeNameTextField*/
+                        let Fields = document.getElementsByClassName("InputInformationField");
+                        let a= 0;
+                        for (let key in information) {
+                            if (information[key]) {
+                            Fields[a].value = information[key];
+                            }
+                            else {
+                                Fields[a].value = "";
+                            }
+                            ++a;
+                        }
+                    });
                                    
             })
         }(i))}

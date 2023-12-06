@@ -123,8 +123,7 @@ app.post ('/getformDate', (req, res) => {
     console.log(JSON.stringify(req.body))
     res
     .status(200)
-    .send(PersonInf+LeaderInf+FactoryInf)
-
+    .send(Object.assign({}, PersonInf, LeaderInf, FactoryInf))
     .end;
     
 })
@@ -133,7 +132,7 @@ app.post ('/getformDate', (req, res) => {
 app.post ('/block', (req, res) => {
     //console.log(req.body);
     //res.send(req.body);
-    StudentName = req.body.FirstNameTextField + " " + req.body.SecondNameTextField + " " + req.body.TreeNameTextField;
+    //StudentName = req.body.FirstNameTextField + " " + req.body.SecondNameTextField + " " + req.body.TreeNameTextField;
     res.render(createPath('block'), {StudentName} );
     DataJSON = JSON.stringify(req.body);
     res.end;
