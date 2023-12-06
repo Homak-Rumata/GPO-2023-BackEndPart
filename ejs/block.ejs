@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html lang='ru'>
+<%- include('./partial/header.ejs') %>
+
+
+<body>
+  <div class="margins">
+    <%- include('./partial/logo.ejs') %>
+  </div>
+  
+
+  <div id="page_control_panel">
+    <div class="margins">
+    <button id="StartPageButton" class="SelectorButton">Главная</button>
+    <button id="MessageButton" class="SelectorButton" >Уведомления</button>
+    <button id="WorkPlaceButton" class="SelectorButton" >Заявление</button>
+    </div>
+    </div>
+
+    
+  <div class="margins">
+  <div id="StartBlock" class="active"> 
+    Здесь пока ничего нет  
+    <div style="height: 1000px;">
+      dfggdg
+    </div>      
+    
+  </div>
+  
+
+  <div id="MessageBlock">
+      
+    <div id = "d30" style="color: white;">
+      <div style="bottom: 30px;">Попытка создать сложный многоугольник</div>
+      </div>
+
+  </div>
+
+
+
+  
+  <div id="WorkBlock">
+    <div id="StatList" class = "ThirdForm active">
+      <%- include("./partial/statmens.ejs") %>
+      
+  
+    </div>
+    <div id="FormBlock" class = "ThirdForm">
+    <div id="Head">
+      <h1 style="font-weight: normal; font-style: normal;">
+        Заявление  
+        <%= StudentName %>
+      </h1>
+    </div>
+    
+    <div id="Steps">
+      Steps
+    </div>  
+      <%- include('./partial/StepsBar.ejs') %>
+      <%- include('./partial/Workpanel.ejs') %>
+      <%- include('./partial/leader.ejs') %>
+      <%- include('./partial/factory.ejs') %>
+    </div>
+    </div>
+    
+    
+
+  </div>
+  </div>
+  <script src="../FetchScripts/GetStatmens.js">
+  </script>
+  </script>
+  <script src="../OpenScript/WindowScript.js">  
+  </script>
+  <script src="../OpenScript/StersBoardCollarScript.js">
+  </script>
+  <script src="../FetchScripts/POSTresModule.js">
+  </script>
+  <script src="./FetchScripts/GetStepsImage.js">
+  </script>
+  <script src="../OpenScript/OpenForm.js">
+  </script>
+  <script src="../FetchScripts/RestoreDate.js">
+
+  </script>
+
+  <script>
+    let openformid;
+  </script>
+  
+
+  
+</body>

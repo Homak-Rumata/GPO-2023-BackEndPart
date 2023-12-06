@@ -1,0 +1,258 @@
+div#image_and_pagename:only-child {display: inline-block;}
+body{
+    margin: 0;
+    padding: 0;
+}
+
+div.margins {
+    margin-left: 10%;
+}
+
+div.ThirdForm{
+    visibility: hidden;
+    opacity: 0;
+    display: grid;
+    height: 0px;
+    width: 0px;
+}
+
+div.ThirdForm.active{
+    visibility: visible;
+    opacity: 1;
+    display: block;
+    height: auto;
+    width: auto;
+}
+
+div#page_control_panel {
+    margin: 0px;
+    padding: 0px;
+    background-color: #3c388d; 
+    height: 40px; 
+    width: max-width; }
+
+    button.SelectorButton {
+    margin: 0px;
+    padding: 0px;
+    font-weight: 400; 
+    border: none; 
+    width: 150px; 
+    height: 40px; 
+    background-color: #3c388d; 
+    display: inline-block; 
+    color:white; 
+    font-size: large; 
+    text-align: left;
+    position: relative; }
+
+    button.SelectorButton:hover {background-color:white;
+        color:black}
+    button.SelectorButton:focus {background-color:greenyellow;
+    color:black}
+
+
+
+div#StartBlock {height: 500;
+    background-color: gray;
+    width: 70%;
+    margin:auto;
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+    }
+div#StartBlock.active {visibility:visible;
+opacity: 1;
+display: grid;}
+
+div#MessageBlock {visibility: hidden;
+    opacity: 0;
+    display: none;
+}
+
+div#MessageBlock.active {visibility:visible;
+    opacity: 1;
+    display: grid;}
+
+    div#WorkBlock {visibility: hidden;
+        opacity: 0;
+        display: none;
+    }
+    
+    div#WorkBlock.active {visibility:visible;
+        opacity: 1;
+        display: grid;
+    }
+
+    input.InputInformationField {
+        background-color: greenyellow;
+        border: 1px solid black;
+        height: 30px;
+        border-radius: 10px;
+        display: block}
+
+    div.CompBlock {
+        display: inline-block;
+        list-style: none;
+        margin: 15px;
+        vertical-align: top;
+    }
+
+    div.CompBlock#DerictionFields {
+        width: 61%;
+    }
+
+    input#Direction {
+        width:100%;
+    }
+
+
+        #d30 {
+            width: 189px;
+            height: 45px;
+            flex-shrink: 0;
+            fill: rgba(159, 197, 58, 0.00);
+
+        stroke-width: 1px;
+            stroke: #3c388d;
+            }
+            
+    div#StepPannel {
+            display: inline-block;
+            list-style: none;
+            text-align: center;
+            position: sticky;
+            vertical-align: top;
+            }
+
+    .WorkDateBlocks {
+        list-style: none;
+        display: inline-block;
+        margin-left: 30px;
+        visibility: hidden;
+        opacity: 0;
+        display: none;
+    }
+
+    div.WorkDateBlocks.active {
+        visibility:visible;
+        opacity: 1;
+        display: grid;
+        display: inline-block;
+    }
+    
+
+    input.StepControlBotton {
+        /*background-color: white;
+        color: black;*/
+        font-size: large;
+        
+        border: none;
+        background: none;
+
+        height: 25px;
+        width: auto;
+    }
+
+    div.StepControlField.active {
+        background-color: #3c388d;
+        fill: #3c388d;
+        color: white;
+    }
+
+    div.StepControlField {
+        border: 1px solid black;
+        margin:0px;
+        border-radius: 15px;
+    }
+
+    div.Middle {
+        border-top: none;
+        border-radius: 0px;
+    }
+
+    div.Down {
+        border-top: none;
+        border-top-right-radius: 0%;
+        border-top-left-radius: 0%;
+        
+    }
+
+    div.Up {
+        border-bottom-left-radius: 0%;
+        border-bottom-right-radius: 0%;
+    }
+
+    div.StepControlField.active>input {
+        color:white;
+    }
+
+    div.StepControlField>input {
+        margin: 10px;
+    }
+
+    input.AgreeFormButton {
+        font-weight: 400; 
+    border: none; 
+    width: 150px; 
+    height: 40px; 
+    background-color: #3c388d; 
+    display: inline-block; 
+    color:white; 
+    font-size: large; 
+    text-align: left;
+    position: relative; 
+    left: 15px;
+    }
+
+    div#WorkPannel input.AgreeFormButton {
+        bottom: 50px;
+    }
+
+    div.StepControlField hr {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    input.CreateFormButton {
+    font-weight: 400; 
+    border: none; 
+    width: 200px; 
+    height: 40px; 
+    background-color: #3c388d; 
+    display: block; 
+    color:white; 
+    font-size: large; 
+    text-align: center;
+    position: relative; 
+    left: 30px;
+    top: 30px
+    }
+
+    input.ButtonOpenForm {
+        font-weight: 400; 
+        border: none; 
+        width: 200px; 
+        height: 40px; 
+        background-color: #3c388d; 
+        display: block; 
+        color:white; 
+        font-size: large; 
+        text-align: center;
+        position: relative; 
+        }
+
+    th.InfFields {
+        font-weight: normal;
+        font-size: large;
+
+        width: 150px;
+    }
+
+    tr.InfFields {
+        font-weight: normal;
+        height: 50px;
+    }
+
+
+
+    
