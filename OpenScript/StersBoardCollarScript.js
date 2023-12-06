@@ -7,8 +7,17 @@ let Steps = document.getElementsByClassName("StepControlBotton");
 //Рабочие поля
 let Panels = [document.getElementById("WorkPannel"), undefined, 
   document.getElementById("factory"), document.getElementById("leader"), undefined];
-//Покраска кнопок  
+//Покраска кнопок
 let Fields = document.getElementsByClassName("StepControlField"); 
+
+var condition = {
+  a1: 0,
+  a3: 0,
+  a4: 0
+};
+
+
+
 
 Fields[0].classList.add ('active');
 Panels[0].classList.add ('active');

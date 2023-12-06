@@ -1,4 +1,9 @@
+var idarray = [];
+
 (async function () {
+
+    setTimeout(() => {}, 500);
+
     let response = await fetch("/getstatmens", {
     method: 'POST',
     headers: {
@@ -57,6 +62,7 @@ for (let i = 0; i<result.length; i++)
         let Row = document.createElement('tr');
         Row.classList.add("InfFields")
         let CellsInfo = result[i];
+        idarray.push (CellsInfo.id);
         openformid = CellsInfo.id;
         let tyme = document.createElement('th');
         tyme.classList.add("InfFields")

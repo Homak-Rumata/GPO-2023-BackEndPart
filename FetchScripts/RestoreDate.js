@@ -1,20 +1,27 @@
+
+
 function a () {
-    let id;
     
+    let Form = document.getElementById("FormBlock");
+    let FormList = document.getElementById("StatList");
+
     let Buttons = document.getElementsByClassName("ButtonOpenForm");
 
-    alert(Buttons.length);
+    //alert(Buttons.length);
     
     for (let i = 0; i<Buttons.length; i++){
         (async function(index){
+
+            
             Buttons[index].addEventListener('click', function (e){
+                alert (index);
                 e.preventDefault;
                 id = 0;//openformid[index];
                 let jsn = {
-                    id : "1"
+                    id : idarray[index]
                 };
 
-                alert (JSON.stringify(jsn));
+                //alert (JSON.stringify(jsn));
                 
                 fetch("/getformDate", {
                     method: 'POST',
@@ -25,26 +32,6 @@ function a () {
                     })
                     .then (response => response.json())
                     .then (information => {
-                        /*FactoryNameTextField.value = information.FactoryNameTextField;
-                        RegionNameTextField.value = information.RegionNameTextField;
-                        DistrictNameTextField.value = information.DistrictNameTextField;
-                        LocalityNameTextField.value = information.LocalityNameTextField;
-                        StreetTextField.value = information.StreetTextField;
-                        buildingNumberTextField.value = information.buildingNumberTextField;
-                        MailPostNumberTextField.value = information.MailPostNumberTextField;
-                        FactoryNameTextField.value = information.FactoryNameTextField;
-                        RegionNameTextField.value = information.RegionNameTextField;
-                        DistrictNameTextField.value = information.DistrictNameTextField;
-                        LocalityNameTextField.value = information.LocalityNameTextField;
-                        StreetTextField.value = information.StreetTextField;
-                        buildingNumberTextField.value = information.buildingNumberTextField;
-                        MailPostNumberTextField.value = information.MailPostNumberTextField;
-                        WorkLeaderFirstNameTextField.value = information.WorkLeaderFirstNameTextField;
-                        WorkLeaderSecondNameTextField.value = information.WorkLeaderSecondNameTextField;
-                        WorkLeaderTreeNameTextField.value = information.WorkLeaderTreeNameTextField;
-                        CafedralLeaderFirstNameTextField.value = information.CafedralLeaderFirstNameTextField;
-                        CafedralLeaderSecondNameTextField.value = information.CafedralLeaderSecondNameTextField;
-                        CafedralLeaderTreeNameTextField.value = information.CafedralLeaderTreeNameTextField*/
                         let Fields = document.getElementsByClassName("InputInformationField");
                         let a= 0;
                         for (let key in information) {
@@ -59,7 +46,17 @@ function a () {
                     });
                                    
             })
+
+            Buttons[index].addEventListener('click', function (e){
+                e.preventDefault;
+                for (let i in condition) {
+                    condition[i] = 0;
+                }
+                Form.classList.add('active');
+                FormList.classList.remove('active');
+            })
+
         }(i))}
 }
 
-setTimeout(a , 1000);
+setTimeout(a , 999);

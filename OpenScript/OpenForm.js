@@ -1,12 +1,15 @@
+//Открытие панели запроса
 (function(){
-setTimeout (() => {}, 1000);
-let FormButton = document.getElementsByClassName("ButtonOpenForm");
+
 let CreateForm = document.getElementById("CreateStatemen");
 let BackButton = document.getElementById("WorkPlaceButton");
 let Form = document.getElementById("FormBlock");
 let FormList = document.getElementById("StatList");
 
 BackButton.addEventListener('click', function(e){
+    for (let i in condition) {
+        condition[i] = 0;
+    }
     e.preventDefault();
     Form.classList.remove('active');
     FormList.classList.add('active');
@@ -14,18 +17,31 @@ BackButton.addEventListener('click', function(e){
 
 CreateForm.addEventListener('click', function(e){
     e.preventDefault();
+    for (let i in condition) {
+        condition[i] = 0;
+    }
     Form.classList.add('active');
     FormList.classList.remove('active');
 })
+
+let FormButton = document.getElementsByClassName("ButtonOpenForm");
 
 for (let i = 0; i<FormButton.length; i++){
     (function(index){
         FormButton[index].addEventListener('click', function (e){
             e.preventDefault;
+            for (let i in condition) {
+                condition[i] = 0;
+            }
             Form.classList.add('active');
             FormList.classList.remove('active');
         })
     }(i))}
+        
+        
+        
+        
+         
 
 
 
