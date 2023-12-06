@@ -14,7 +14,6 @@ function a () {
 
             
             Buttons[index].addEventListener('click', function (e){
-                alert (index);
                 e.preventDefault;
                 id = 0;//openformid[index];
                 let jsn = {
