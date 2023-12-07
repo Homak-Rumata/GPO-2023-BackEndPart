@@ -1,6 +1,6 @@
 var idarray = [];
 
-(async function () {
+async function getstatmens () {
 
     setTimeout(() => {}, 500);
 
@@ -22,6 +22,10 @@ let result = await response.json();
 
 let form = document.getElementById("statmens");
 
+    while (form.lastElementChild) {
+        form.removeChild(form.lastElementChild);
+    }
+
 if (result.length === 0) {
     let art = document.createElement('div')
     art.classList.add('StateBlock');
@@ -32,6 +36,7 @@ if (result.length === 0) {
 else {
     let art = document.createElement('div')
     let St = document.createElement('table');
+    St.id = "StateTabble"
     let StetmenTable = document.createElement('tbody');
 
     St.appendChild(StetmenTable);
@@ -92,7 +97,8 @@ for (let i = 0; i<result.length; i++)
 
 
     art.appendChild(St);
-    document.getElementById("statmens").appendChild(art);
+    form.appendChild(art);
+    //document.getElementById("statmens").appendChild(art);
         
     
     
@@ -152,4 +158,10 @@ for (let i = 0; i<result.length; i++)
         }(i))}
 })()*/
 
-})()
+}
+
+var GetStatmen = getstatmens;
+
+alert ("first");
+
+getstatmens();

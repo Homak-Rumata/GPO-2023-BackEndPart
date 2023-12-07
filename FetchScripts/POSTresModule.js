@@ -128,6 +128,7 @@ for (let i = 1; i<6; ++i){
                 for (let i in condition) {
                     condition[i] = 0;
                 }
+                GetStatmen();
                 LastCommand = 1;
                 e.preventDefault();
                 document.getElementById("FormBlock").classList.remove('active');

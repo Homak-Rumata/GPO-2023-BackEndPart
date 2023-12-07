@@ -10,6 +10,7 @@ BackButton.addEventListener('click', function(e){
     for (let i in condition) {
         condition[i] = 0;
     }
+    GetStatmen();
     e.preventDefault();
     Form.classList.remove('active');
     FormList.classList.add('active');

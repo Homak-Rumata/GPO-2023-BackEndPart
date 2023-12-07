@@ -161,6 +161,6 @@ app.get ('/getstepsimage', (req, res) => {
     });
 
     app.post ('/NewStatmen', (req, res) => {
-        
+        console.log ("New Statmen");
     })
 })
