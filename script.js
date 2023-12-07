@@ -159,4 +159,8 @@ app.get ('/getstepsimage', (req, res) => {
         res.send(data);
         res.end;
     });
+
+    app.post ('/NewStatmen', (req, res) => {
+        
+    })
 })
