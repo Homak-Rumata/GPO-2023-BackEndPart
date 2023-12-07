@@ -10,9 +10,7 @@ function a () {
     //alert(Buttons.length);
     
     for (let i = 0; i<Buttons.length; i++){
-        (async function(index){
-
-            
+        (async function(index){           
             Buttons[index].addEventListener('click', function (e){
                 e.preventDefault;
                 id = 0;//openformid[index];
@@ -58,4 +56,5 @@ function a () {
         }(i))}
 }
 
-setTimeout(a , 999);
+var LinkStatmenButtonFunction = a;
+

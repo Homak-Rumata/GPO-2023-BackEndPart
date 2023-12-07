@@ -98,6 +98,7 @@ for (let i = 0; i<result.length; i++)
 
     art.appendChild(St);
     form.appendChild(art);
+    LinkStatmenButtonFunction();
     //document.getElementById("statmens").appendChild(art);
         
     
@@ -162,6 +163,5 @@ for (let i = 0; i<result.length; i++)
 
 var GetStatmen = getstatmens;
 
-alert ("first");
 
 getstatmens();
