@@ -24,6 +24,7 @@ AgreeButton[5] = undefined;
 const command = [ 
 function () {
     let date = {
+        id: idstatmen,
         FirstName: FirstNameTextField.value,
         SecondName: SecondNameTextField.value,
         ThirddName: TreeNameTextField.value,
@@ -47,6 +48,7 @@ undefined,
 
 function () {
     let date = {
+        id: idstatmen,
         FactoryNameTextField: FactoryNameTextField.value,
         RegionNameTextField: RegionNameTextField.value,
         DistrictNameTextField: DistrictNameTextField.value,
@@ -67,6 +69,7 @@ function () {
 
 function () {
     let date = {
+        id: idstatmen,
         WorkLeaderFirstNameTextField: WorkLeaderFirstNameTextField.value,
         WorkLeaderSecondNameTextField: WorkLeaderSecondNameTextField.value,
         WorkLeaderTreeNameTextField: WorkLeaderTreeNameTextField.value,

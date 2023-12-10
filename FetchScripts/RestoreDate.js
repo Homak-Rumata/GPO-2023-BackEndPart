@@ -1,4 +1,4 @@
-
+var idstatmen;
 
 function a () {
     
@@ -17,6 +17,7 @@ function a () {
                 let jsn = {
                     id : idarray[index]
                 };
+                idstatmen = idarray[index];
 
                 //alert (JSON.stringify(jsn));
                 

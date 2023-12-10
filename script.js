@@ -42,6 +42,10 @@ let Date = [
     }
 ]
 
+function GetSessionTooken (Name, password) {
+    return "user";
+}
+
 //Имя на верху формы
 let StudentName = "Иванов Иван Иванович"
 app.set ('viem engine', 'ejs');
@@ -55,12 +59,25 @@ app.listen ("3001", (error) => {
 }) 
 
 
+/*app.get ('/k;l', (req, res) => {
+    res.render(createPath("autorization"));
+    res.end();
+
+    
+
+})*/
+
 //Инициализация формы, StudentName - отображаемое имя студента
 app.get ('/', (req, res) => {
-    
+    //console.log(JSON.stringify(req.body));
+    res.status(200);
+    //res.send(GetSessionTooken(req.body.name, req.body.password));
+
     res.render(createPath('block'), {StudentName} );
     res.end;
 });
+
+
 
 app.use (express.urlencoded({extended: false}));
 
@@ -138,6 +155,7 @@ app.post ('/getstatmens', (req, res) => {
 //Ответ на запрос данных о заполненной форме
 app.post ('/getformDate', (req, res) => {
     console.log(JSON.stringify(req.body))
+    
     res
     .status(200)
     .send(Object.assign({}, PersonInf, LeaderInf, FactoryInf))
