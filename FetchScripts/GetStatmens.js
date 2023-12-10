@@ -45,8 +45,8 @@ else {
     let TopTitle = [];
     let TopTitleInfo = [
         "Создано",
-        "Статус",
         "Вид практики",
+        "Статус",
         ""
     ]
 
