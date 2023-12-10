@@ -1,3 +1,5 @@
+//const { response } = require("express");
+
 (function() {
     let NewStatmensButton = document.getElementById("CreateStatemen");
    NewStatmensButton.addEventListener('click', function(e) {
@@ -8,6 +10,11 @@
         headers: {
             'Content-Type': 'application/json;charset=utf-8'
           },
+        })
+        .then (response => response.text())
+        .then (information => {
+            alert(information)
+            idstatmen = information;
         })
     })
 }())

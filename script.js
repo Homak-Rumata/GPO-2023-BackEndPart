@@ -155,7 +155,7 @@ app.post ('/getstatmens', (req, res) => {
 //Ответ на запрос данных о заполненной форме
 app.post ('/getformDate', (req, res) => {
     console.log(JSON.stringify(req.body))
-    
+
     res
     .status(200)
     .send(Object.assign({}, PersonInf, LeaderInf, FactoryInf))
@@ -186,5 +186,7 @@ app.get ('/getstepsimage', (req, res) => {
 
     app.post ('/NewStatmen', (req, res) => {
         console.log ("New Statmen");
+        res.send("New Statmen");
+        res.end()
     })
 })
