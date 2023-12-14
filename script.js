@@ -3,9 +3,19 @@ const fs = require('fs');
 const app = express();
 const path = require ('path');
 
-let PersonInf;
+let PersonInf = /*{
+    id:0,
+    FirstName:"Максим",
+    SecondName:"Татаринов",
+    ThirddName:"Просто",
+    Group:undefined,
+    Direction:undefined,
+    PracticeSort:undefined,
+    PracticeType:undefined,
+    FirstTime:"",
+    LastTime:""}*/;
 let LeaderInf;
-let FactoryInf;
+let FactoryInf = {};
 
 
 //Файл отпраки данных актуальных заявлений
@@ -161,6 +171,7 @@ app.post ('/getformDate', (req, res) => {
     .status(200)
     .send(Object.assign({}, PersonInf, LeaderInf, FactoryInf))
     .end;
+    console.log(JSON.stringify(Object.assign({}, PersonInf, LeaderInf, FactoryInf)));
     
 })
 
