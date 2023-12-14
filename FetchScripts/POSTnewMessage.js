@@ -13,7 +13,7 @@
         })
         .then (response => response.text())
         .then (information => {
-            alert(information)
+
             idstatmen = information;
         })
     })

@@ -128,6 +128,7 @@ app.get ('/LeaderInfoForm', (req, res) => {
 app.post ('/FactoryInfoForm', (req, res) => {
     console.log(JSON.stringify(req.body));
     FactoryInf = req.body;
+    console.log(JSON.parse(JSON.stringify(FactoryInf)));
     res
     .status(200)
     .json({
@@ -184,9 +185,11 @@ app.get ('/getstepsimage', (req, res) => {
         res.end;
     });
 
+
+//Присвоение нового  Id
     app.post ('/NewStatmen', (req, res) => {
         console.log ("New Statmen");
-        res.send("New Statmen");
+        res.send("New");
         res.end()
     })
 })
