@@ -35,7 +35,7 @@ function a () {
 
                         FirstNameTextField.value = information.FirstName,
                         SecondNameTextField.value = information.SecondName,
-                        TreeNameTextField.value = information.TreeName,
+                        TreeNameTextField.value = information.ThirddName,
                         Group.value = information.Group,
                         Direction.value = information.Direction,
                         PracticeSort.value = information.PracticeSort,

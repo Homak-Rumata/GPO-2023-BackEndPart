@@ -13,7 +13,9 @@ function Autorization () {
     })
         .then (response => response.json())
         .then(information => {
-            sessionStorage.setItem("SessionNumber", information); 
+            alert(information);
+            sessionStorage.setItem("SessionNumber", information);
+             
         })
     
 }

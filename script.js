@@ -1,19 +1,20 @@
+const { Console } = require('console');
 const express = require('express');
 const fs = require('fs');
 const app = express();
 const path = require ('path');
 
-let PersonInf = /*{
-    id:0,
-    FirstName:"Максим",
-    SecondName:"Татаринов",
-    ThirddName:"Просто",
-    Group:undefined,
-    Direction:undefined,
-    PracticeSort:undefined,
-    PracticeType:undefined,
-    FirstTime:"",
-    LastTime:""}*/;
+let Inf = {
+    FirstNameTextField:"Максим",
+    SecondNameTextField:"Татаринов",
+    ThirddNameTextFiled:"Отчество",
+    Group:"710-3",
+    Direction:"Информационная безопасность автоматизированных систем",
+    PracticeSort:"Учебная",
+    PracticeType:"Учебная",
+    FirstTime:"2022-01-01",
+    LastTime:"2023-03-02"};
+let PersonInf;
 let LeaderInf;
 let FactoryInf = {};
 
@@ -69,13 +70,7 @@ app.listen ("3001", (error) => {
 }) 
 
 
-/*app.get ('/k;l', (req, res) => {
-    res.render(createPath("autorization"));
-    res.end();
 
-    
-
-})*/
 
 //Инициализация формы, StudentName - отображаемое имя студента
 app.get ('/', (req, res) => {
@@ -100,6 +95,21 @@ app.use (express.json());
 app.post ('/PersonInfoForm', (req, res) => {
     console.log(JSON.stringify(req.body));
     PersonInf = req.body
+    res
+    .status(200)
+    .json({
+        date1: "SomeDate",
+        date2: "SomeDate2"
+    })
+    res.end;
+})
+
+app.post ('/InfoForm', (req, res) => {
+    console.log(JSON.stringify(req.body));
+    for (key in req.body) {
+        Inf[key] = req.body[key];
+    }
+    
     res
     .status(200)
     .json({
@@ -157,22 +167,61 @@ app.get ('/FactoryInfoForm', (req, res) => {
 
 //Получение информации о актуальных запросах
 app.post ('/getstatmens', (req, res) => {
+    console.log (JSON.stringify(req.body));
     res
     .status(200)
     .send(Date)
     .end;
 })
 
-//Ответ на запрос данных о заполненной форме
-app.post ('/getformDate', (req, res) => {
-    console.log(JSON.stringify(req.body))
-
+app.post ('/setRecenze', (req, res) => {
+    console.log (JSON.stringify(req.body));
     res
     .status(200)
-    .send(Object.assign({}, PersonInf, LeaderInf, FactoryInf))
+    .send(Date)
     .end;
-    console.log(JSON.stringify(Object.assign({}, PersonInf, LeaderInf, FactoryInf)));
-    
+})
+
+//Присвоение нового  Id
+app.post ('/NewStatmen', (req, res) => {
+    console.log ("New Statmen");
+    res
+    .status(200)
+    .send({id: "New"})
+    .end()
+})
+
+app.post ('/autorization', (req, res) => {
+    console.log ("Авторизация");
+    res
+    .status(200)
+    .send({token: 12345432, rule: 1});
+    res.end()
+})
+
+app.post ('/getRecenze', (req, res) => {
+    console.log (JSON.stringify(req.body));
+    res
+    .status(200)
+    .send({text: "Информация для пользователя "});
+    res.end()
+})
+
+
+//Ответ на запрос данных о заполненной форме
+app.post ('/getformDate', (req, res) => {
+    if (req.body.id==="New"){
+        console.log ("get")
+        res
+    .status(200)
+    .send({status: 1})
+    .end;
+    }else {
+    res
+    .status(200)
+    .send(Inf)
+    .end;
+    console.log("set "+JSON.stringify(req.body));}
 })
 
 //Легаси(в коментариях), действие кнопки/ открытие стартовой страницы
@@ -190,17 +239,9 @@ let a = 0;
 
 //Меняет рисунок прогресса, зависит от i (сейчас каждая перезарузка) увеличивает i на 1
 app.get ('/getstepsimage', (req, res) => {
-    let i = (a++%4)+1;
+    let i = (a++%3)+1;
     fs.readFile(`./Picturies/Step${i}.svg`, function(error, data) {
-        res.send(data);
+        console.log (i);
+        res.send(`${i}`);
         res.end;
-    });
-
-
-//Присвоение нового  Id
-    app.post ('/NewStatmen', (req, res) => {
-        console.log ("New Statmen");
-        res.send("New");
-        res.end()
-    })
-})
+    })})
